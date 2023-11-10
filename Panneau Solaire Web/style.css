@@ -1,15 +1,88 @@
-* {
-    background-color: aliceblue;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM, serif';
+    background-color: #f4f4f4;
 }
 
-#sun {
-    width: 10%;
+header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
     display: flex;
-    margin: auto;
-    
+    justify-content: space-between;
+    align-items: center;
 }
 
-#tiltle {
-    display: block;
-    margin: auto;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
+
+img {
+    max-width: 75px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+
+#manual-controls {
+    display: none;
+}
+
+#manual-controls label {
+    display: block;
+    margin-top: 10px;
+}
+
+#manual-controls input {
+    width: 100%;
+}
+

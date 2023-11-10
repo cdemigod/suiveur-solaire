@@ -2,12 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" />
-    <title>Contrôle du PS</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Contrôle Solaire</title>
 </head>
 <body>
-    <img src="img/soleil.png" id="sun" />
-    <h2 id="title">Panneau Solaire</h2>
+    <header>
+        <div class="logo-container">
+            <img src="img/soleil.png" alt="Logo du panneau solaire">
+            <h1>Contrôle Solaire à Distance</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#s">État</a></li>
+                <li><a href="présentation.html">Présentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="status">
+        <h2>État du Panneau Solaire</h2>
+        <p>Mode : <span id="mode">Distant</span></p>
+        <p>État Automatique : <span id="automatic-state">Activé</span></p>
+
+        <button id="toggle-mode">Basculer Mode</button>
+        <button id="toggle-automatic">Basculer Automatique/Manuel</button>
+
+        <div id="manual-controls">
+            <label for="pan-slider">Position Pan :</label>
+            <input type="range" id="pan-slider" min="0" max="180" value="90">
+            <br>
+            <label for="tilt-slider">Position Tilt :</label>
+            <input type="range" id="tilt-slider" min="0" max="180" value="90">
+        </div>
+
+        <div id="manual-controls">
+            <label for="pan-slider">Position Pan :</label>
+            <input type="range" id="pan-slider" min="0" max="180" value="90">
+            <span id="pan-value-display">Position Pan: 90°</span>
+            <br>
+            <label for="tilt-slider">Position Tilt :</label>
+            <input type="range" id="tilt-slider" min="0" max="180" value="90">
+            <span id="tilt-value-display">Position Tilt: 90°</span>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
