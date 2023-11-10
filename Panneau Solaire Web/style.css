@@ -1,0 +1,15 @@
+* {
+    background-color: aliceblue;
+}
+
+#sun {
+    width: 10%;
+    display: flex;
+    margin: auto;
+    
+}
+
+#tiltle {
+    display: block;
+    margin: auto;
+}
