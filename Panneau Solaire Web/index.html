@@ -8,46 +8,40 @@
     <title>Contrôle Solaire</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo-container">
-            <img src="img/soleil.png" alt="Logo du panneau solaire">
-            <h1>Contrôle Solaire à Distance</h1>
+            <img src="img/soleil.png" alt="Logo du panneau solaire" class="logo">
+            <h1 class="site-title">Contrôle Solaire à Distance</h1>
         </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <nav class="menu">
-            <ul>
-                <li><a href="#s">État</a></li>
-                <li><a href="présentation.html">Présentation</a></li>
+            <ul class="menu-list">
+                <li><a href="#status">État</a></li>
+                <li><a href="test.html">test</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="status">
-        <h2>État du Panneau Solaire</h2>
-        <p>Mode : <span id="mode">Distant</span></p>
-        <p>État Automatique : <span id="automatic-state">Activé</span></p>
+    <div class="content-wrapper">
+        <section id="status" class="content-section">
+            <h2 class="section-title">Automatique</h2>
+            <p class="info-text">État Automatique : <span id="automatic-state">Activé</span></p>
 
-        <button id="toggle-mode">Basculer Mode</button>
-        <button id="toggle-automatic">Basculer Automatique/Manuel</button>
+            <button id="automatic-state" class="action-button">Basculer Automatique/Manuel</button>
 
-        <div id="manual-controls">
-            <label for="pan-slider">Position Pan :</label>
-            <input type="range" id="pan-slider" min="0" max="180" value="90">
-            <br>
-            <label for="tilt-slider">Position Tilt :</label>
-            <input type="range" id="tilt-slider" min="0" max="180" value="90">
-        </div>
-
-        <div id="manual-controls">
-            <label for="pan-slider">Position Pan :</label>
-            <input type="range" id="pan-slider" min="0" max="180" value="90">
-            <span id="pan-value-display">Position Pan: 90°</span>
-            <br>
-            <label for="tilt-slider">Position Tilt :</label>
-            <input type="range" id="tilt-slider" min="0" max="180" value="90">
-            <span id="tilt-value-display">Position Tilt: 90°</span>
-        </div>
-
-    </section>
+            <div id="manual-controls" class="manual-controls">
+                <p style="text-align: center;">
+                    X: <span id="x_coordinate"> </span>
+                    Y: <span id="y_coordinate"> </span>
+                </p>
+                <canvas id="canvas" name="game"></canvas>
+                <h2 class="section-title">Mode</h2>
+                <!-- Contenu spécifique au mode automatique ici -->
+                <p class="info-text">Mode : <span id="mode">Distant</span></p>
+                <button id="toggle-mode" class="action-button">Basculer Mode</button>
+            </div>
+        </section>
+    </div>
 
 
     <script src="script.js"></script>

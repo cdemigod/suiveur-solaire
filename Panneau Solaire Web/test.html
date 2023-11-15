@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousebot Joystick Control</title>
+    <style>
+        /* Ajoutez vos styles CSS ici */
+    </style>
+</head>
+<body style="position: fixed; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:rgb(128, 128, 128); font-size: xx-large;">
+    <h1 style="text-align:center">MOUSEBOT </h1>
+    <p style="text-align: center;">
+        X: <span id="x_coordinate"> </span>
+        Y: <span id="y_coordinate"> </span>
+        Speed: <span id="speed"> </span> %
+        Angle: <span id="angle"> </span>
+    </p>
+    <canvas id="canvas" name="game"></canvas>
+
+    <!-- Remplacez la section slider par le code du joystick -->
+    <!-- ... -->
+
+    <script>
+        var connection = new WebSocket('ws://' + "192.168.4.1" + ':81/', ['arduino']);
+        connection.onopen = function () {
+            connection.send('Connect ' + new Date());
+        };
+        connection.onerror = function (error) {
+            console.log('WebSocket Error ', error);
+            alert('WebSocket Error ', error);
+        };
+        connection.onmessage = function (e) {
+            console.log('Server: ', e.data);
+        };
+
+        function send(x, y, speed, angle) {
+            var data = { "x": x, "y": y, "speed": speed, "angle": angle };
+            data = JSON.stringify(data);
+            console.log(data);
+            connection.send(data);
+        }
+    </script>
+
+    <!-- Remplacez la section slider par le code du joystick -->
+    <!-- ... -->
+
+    <script src="script.js"></script>
+</body>
+</html>
