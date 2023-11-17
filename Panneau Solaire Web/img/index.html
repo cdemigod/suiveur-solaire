@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contrôle Solaire</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="img/soleil.png" alt="Logo du panneau solaire" class="logo">
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="status" class="content-section">
+            <h2 class="section-title">Automatique</h2>
+            <p class="info-text">État Automatique : <span id="automatic-state">Activé</span></p>
+
+            <button id="toggle-automatic" class="action-button">Basculer Automatique/Manuel</button>
+            <section id="status">
+
+
+                <div id="manual-controls">
+                    <label for="pan-slider">Position Horizontale :</label>
+                    <input type="range" id="pan-slider" min="1" max="179" value="90">
+                    <span id="pan-value-display">Position</span>
+                    <br>
+                    <label for="tilt-slider">Position Verticale :</label>
+                    <input type="range" id="tilt-slider" min="1" max="179" value="90">
+                    <span id="tilt-value-display">Position</span>
+                </div>
+        
+            </section>
+            <p>Mode : Local</p>
+        </section>
+    </div>
+</body>
+</html>
